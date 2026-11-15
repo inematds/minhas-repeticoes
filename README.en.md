@@ -6,7 +6,7 @@
 
 [![Minhas repetições](guia/assets/banner.jpg)](https://inematds.github.io/minhas-repeticoes/guia/en/)
 
-<!-- VIDEO: the lives7 explainer video goes here when published -->
+🎬 Video: https://www.youtube.com/watch?v=3aanGE9Jpz8 · Short: https://youtube.com/shorts/cEHKKEnX4GU
 
 ## What it is
 
