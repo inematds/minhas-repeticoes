@@ -1,12 +1,12 @@
 ---
-name: final-tudo
+name: avise-conteudo
 description: RASCUNHO — você pediu isto 3 vezes. Reescreva a descrição: quando usar e o que entrega.
 ---
 
-# final-tudo
+# avise-conteudo
 
 Rascunho montado a partir de 3 pedidos parecidos. Junte os passos que se repetem,
-tire o que muda de um pedido para outro (vira argumento) e teste com /final-tudo antes de usar.
+tire o que muda de um pedido para outro (vira argumento) e teste com /avise-conteudo antes de usar.
 
 ## Passos (preencha)
 

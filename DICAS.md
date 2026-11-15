@@ -7,7 +7,7 @@ No mesmo período os robôs (claude -p, vigias, Codex exec) fizeram **13.505 tur
 ## Atalho, skill ou nada
 
 1. **Pedido curto que se repete vira atalho.** Até ~120 caracteres e sem passos, como "publique no portal" ou
-   "manda para o v3", você cola com um gatilho de texto (o kit sugere `;portal-publica`; troque por um mais curto se quiser). O kit gera `atalhos-espanso.yml`, pronto para
+   "rode os testes e me mostre o resultado", você cola com um gatilho de texto (o kit sugere `;portal-publica`; troque por um mais curto se quiser). O kit gera `atalhos-espanso.yml`, pronto para
    o [Espanso](https://espanso.org), que é livre e roda em Linux, Mac e Windows. Serve também em snippet do editor
    ou do teclado do celular.
 2. **Pedido longo, com passos, vira skill.** Algo como "crie o repo, escreva o README, rode os testes, faça o guia,

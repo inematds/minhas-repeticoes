@@ -162,10 +162,10 @@
 <h2>30 días de trabajo con agentes, <span class="amb">contados</span></h2>
 <p class="sub">Ejecutamos el kit en una máquina de producción de INEMA, donde agentes de IA hacen videos, guías y publicaciones todos los días (30 días hasta el 15/11/2026). Solo recuentos: ningún texto sale de la computadora. "Turno" es cada vez que la IA trabaja en una ronda.</p>
 <div class="grid g4">
-<div class="card"><span class="num">1</span><h3 class="big">2.287</h3><p>pedidos escritos por una persona en el mes</p></div>
-<div class="card"><span class="num">2</span><h3 class="big">12,6%</h3><p>eran repetición (el mismo pedido 3 veces o más)</p></div>
-<div class="card"><span class="num">3</span><h3 class="big">68×</h3><p>"cuál es la situación": el campeón. Sumando "qué está en marcha" y similares, 80 verificaciones</p></div>
-<div class="card"><span class="num">4</span><h3 class="big">13.505</h3><p>turnos hechos por robots (agentes que funcionan solos, sin que nadie escriba): casi 6 por cada pedido escrito</p></div>
+<div class="card"><h3 class="big">2.287</h3><p>pedidos escritos por una persona en el mes</p></div>
+<div class="card"><h3 class="big">12,6%</h3><p>eran repetición (el mismo pedido 3 veces o más)</p></div>
+<div class="card"><h3 class="big">68×</h3><p>"cuál es la situación": el campeón. Sumando "qué está en marcha" y similares, 80 verificaciones</p></div>
+<div class="card"><h3 class="big">13.505</h3><p>turnos hechos por robots (agentes que funcionan solos, sin que nadie escriba): casi 6 por cada pedido escrito</p></div>
 </div>
 <h3 style="margin:34px 0 10px">A qué modelo de IA se dirigieron los pedidos escritos</h3>
 <p class="sub" style="margin:0 0 10px">Opus 5.5 y Fable 5.2 son dos modelos de Claude: Opus es el más rápido, Fable es el más grande (piensa más, consume más). Codex es el agente de OpenAI.</p>
@@ -174,7 +174,7 @@
 <div class="b"><span class="r">Fable 5.2</span><span class="t"><i style="width:2.4%"></i></span><b>2,4%</b></div>
 <div class="b"><span class="r">Codex (gpt-6-astra)</span><span class="t"><i style="width:0.8%"></i></span><b>0,8%</b></div>
 </div>
-<p class="sub" style="margin-top:14px">El "esfuerzo" (cuánto piensa el modelo antes de actuar) quedó en el nivel medio en casi todos los pedidos. La suscripción llegó al límite de uso 6 veces en Claude y 10 veces en Codex. El 10% de las rondas de Opus 5.5 duraron más de 10 minutos.</p>
+<p class="sub" style="margin-top:14px">El «esfuerzo» (cuánto piensa el modelo antes de actuar) se mantuvo en el nivel medio en casi todas las solicitudes que registran el esfuerzo. La suscripción alcanzó el límite de uso 6 veces en Claude y 10 veces en Codex. El 10% de las rondas de Opus 5.5 superó los 10 minutos.</p>
 </div></section>
 <section id="decide"><div class="wrap">
 <span class="chip">Atajo, skill o respuesta</span>
@@ -226,7 +226,7 @@
 <span>Agrupa solicitudes parecidas</span><span class="arr">→</span>
 <span>Clasifica: atajo · skill · verificación · respuesta (+ enlace, comando)</span><span class="arr">→</span>
 <span>Mide modelo, esfuerzo, límite y turnos largos</span><span class="arr">→</span>
-<span>relatorio.html + atalhos + rascunhos de skill</span>
+<span>relatorio.html + atajos + borradores de skill</span>
 </div>
 </div></section>
 <section id="pre"><div class="wrap">
@@ -234,7 +234,7 @@
 <h2>Qué se necesita</h2>
 <p class="sub">Nada más.</p>
 <div class="grid g3">
-<div class="card"><h3>Python 3.9+</h3><p>Ya viene en Linux y Mac.</p><pre><span class="k">python3</span> --version</pre></div>
+<div class="card"><h3>Python 3.9+</h3><p>Ya viene incluido en Linux. En Mac puede pedir las herramientas de línea de comandos; en Windows usa <code>py</code> en lugar de <code>python3</code>.</p><pre><span class="k">python3</span> --version</pre></div>
 <div class="card"><h3>Historial de Claude Code o de Codex</h3><p>Está en <code>~/.claude/projects</code> e <code>~/.codex/sessions</code>. Basta con haberlo usado.</p><pre><span class="k">ls</span> ~/.claude/projects | head</pre></div>
 <div class="card"><h3>Espanso (opcional)</h3><p>Expansor de texto libre para usar los atajos generados. Cualquier otro sirve.</p><pre><span class="c"># espanso.org</span></pre></div>
 </div>
@@ -277,8 +277,9 @@
 <h3>Convierte en skill lo que tiene pasos</h3>
 <p>Cada borrador incluye 3 ejemplos de cómo lo pediste. Escribe los pasos, convierte lo que cambia en un argumento y pásalo a tus skills. O instala la skill del kit y pídele al agente que lo haga contigo.</p>
 <pre><span class="k">ls</span> relatorio/skills-rascunho/
+<span class="k">mkdir -p</span> ~/.claude/skills
 <span class="k">cp -r</span> skill/minhas-repeticoes ~/.claude/skills/
-<span class="k">cp</span> repeticoes.py ~/.claude/skills/minhas-repeticoes/   <span class="c"># después, en el agente: "¿qué repito?"</span></pre>
+<span class="k">cp</span> repeticoes.py DICAS.md ~/.claude/skills/minhas-repeticoes/   <span class="c"># después, en el agente: "¿qué repito?"</span></pre>
 </div></div>
 <div class="step"><div class="b">7</div><div>
 <h3>Vuelve a medir en 30 días</h3>

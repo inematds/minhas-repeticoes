@@ -174,5 +174,8 @@
 "d3a0cc82511ac9fd": "We ran the kit on an INEMA production machine, where AI agents create videos, guides, and publications every day (30 days through 15/11/2026). Counts only: no text leaves the computer. A \"turn\" is each time the AI works in a round.",
 "ccb85dd74e38eb2a": "If the model thinks too much for the task, adjust the effort level (a setting for how much it thinks), not a phrase in the request.",
 "888db10a05bd2539": "See what showed up",
-"adf1dfcf49baa0fd": "turns handled by bots (agents that run on their own, without anyone typing): almost 6 for every typed request"
+"adf1dfcf49baa0fd": "turns handled by bots (agents that run on their own, without anyone typing): almost 6 for every typed request",
+"de3cb34460779241": "It’s already included in Linux. On Mac, it may ask you to install the command-line tools; on Windows, use",
+"bf2e8cbfcff3c4f6": "The “effort” (how much the model thinks before acting) was set to medium for almost all requests that record effort. The subscription reached its usage limit 6 times in Claude and 10 times in Codex. 10% of Opus 5.5 runs took more than 10 minutes.",
+"9bdf20444598a69c": "instead of"
 }

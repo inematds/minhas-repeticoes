@@ -36,7 +36,7 @@ fizeram 13.505 turnos, quase 6 para cada pedido digitado. Esses números estão 
 | 3 | Ler o seu histórico | `python3 repeticoes.py` (padrão: 30 dias, `~/.claude/projects` e `~/.codex/sessions`) | ⚙️ script |
 | 4 | Ver o relatório | abrir `relatorio/relatorio.html` no navegador | 🧠 você |
 | 5 | Ligar os atalhos | copiar `relatorio/atalhos-espanso.yml` para a pasta `match` do Espanso (Linux `~/.config/espanso/match/`, Mac `~/Library/Application Support/espanso/match/`) ou colar do `atalhos.md` no seu expansor | 🧠 você |
-| 6 | Virar skill o que tem passos | revisar `relatorio/skills-rascunho/<nome>/SKILL.md`, escrever os passos e mover para `~/.claude/skills/`. Para o agente fazer com você: `cp -r skill/minhas-repeticoes ~/.claude/skills/ && cp repeticoes.py ~/.claude/skills/minhas-repeticoes/` | 🧠 você (ou 🤖 o agente, com a skill do kit) |
+| 6 | Virar skill o que tem passos | revisar `relatorio/skills-rascunho/<nome>/SKILL.md`, escrever os passos e mover para `~/.claude/skills/`. Para o agente fazer com você: `mkdir -p ~/.claude/skills && cp -r skill/minhas-repeticoes ~/.claude/skills/ && cp repeticoes.py DICAS.md ~/.claude/skills/minhas-repeticoes/` | 🧠 você (ou 🤖 o agente, com a skill do kit) |
 | 7 | Ajustar modelo e esforço | ler `modelo` e `modelo\|esforço` no relatório e seguir as dicas 6–9 de `DICAS.md` | 🧠 você |
 | 8 | Medir de novo em 30 dias | `python3 repeticoes.py --saida relatorio-mes2` e comparar o `numeros.json` | ⚙️ script |
 

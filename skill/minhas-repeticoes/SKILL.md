@@ -15,6 +15,6 @@ description: Lê o histórico do Claude Code e do Codex (local), mostra o que o 
    repetem. O que muda de um pedido para outro vira argumento. Mostre o SKILL.md proposto. Só grave em
    `~/.claude/skills/<nome>/` com o OK dele.
 5. **Respostas e checagens** (`resposta`, "qual a situação"): não faça atalho. Sugira o que tira a pergunta do caminho
-   (aviso de fim, barra de status, o agente perguntar menos). Veja `DICAS.md` 3–4.
+   (aviso de fim, barra de status, o agente perguntar menos). Veja `DICAS.md` 3–4 (copiado ao lado deste SKILL.md na instalação; senão, no clone do kit).
 6. Nunca mande o relatório, os atalhos ou trechos dos pedidos para fora da máquina. `numeros.json` é o único arquivo
    sem texto do usuário.

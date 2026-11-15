@@ -35,7 +35,8 @@ CURTO = 120           # até isso de caracteres (já normalizado) = candidato a 
 TURNO_LONGO_MS = 10 * 60 * 1000
 
 PARADAS = set("""a o e de da do das dos em no na nos nas um uma para pra por com que se isso este esta esse essa
-the to and of in on for is it this that me eu voce vc q ai la os as ao ou mais ja tambem agora so""".split())
+the to and of in on for is it this that me eu voce vc q ai la os as ao ou mais ja tambem agora so
+deste desta dessa desse tres todo toda tudo final inicio fazer faca""".split())
 
 LIMITE_RE = re.compile(r"hit your (session|weekly|usage|daily)? ?limit", re.I)
 # comandos da própria ferramenta (limpar, sair, trocar modelo) não são trabalho repetido
@@ -325,7 +326,7 @@ def nome_sugerido(grupo: list[Pedido]) -> str:
     c = Counter()
     for p in grupo:
         c.update({w for w in normaliza(p.texto).split() if w.isalpha() and w.islower() and w not in PARADAS and len(w) > 3})
-    ws = [w for w, _ in c.most_common(2)] or ["pedido"]
+    ws = [w for w, _ in sorted(c.items(), key=lambda x: (-x[1], x[0]))[:2]] or ["pedido"]   # determinístico
     return "-".join(ws)[:40]
 
 

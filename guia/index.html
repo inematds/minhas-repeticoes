@@ -162,10 +162,10 @@
 <h2>30 dias de trabalho com agentes, <span class="amb">contados</span></h2>
 <p class="sub">Rodamos o kit numa máquina de produção do INEMA, onde agentes de IA fazem vídeos, guias e publicações todo dia (30 dias até 15/11/2026). Só contagens: nenhum texto sai do computador. "Turno" é cada vez que a IA trabalha numa rodada.</p>
 <div class="grid g4">
-<div class="card"><span class="num">1</span><h3 class="big">2.287</h3><p>pedidos digitados por uma pessoa no mês</p></div>
-<div class="card"><span class="num">2</span><h3 class="big">12,6%</h3><p>deles eram repetição (o mesmo pedido 3 vezes ou mais)</p></div>
-<div class="card"><span class="num">3</span><h3 class="big">68×</h3><p>"qual a situação": o campeão. Somando "o que está rodando" e parecidos, 80 checagens</p></div>
-<div class="card"><span class="num">4</span><h3 class="big">13.505</h3><p>turnos feitos por robôs (agentes que rodam sozinhos, sem ninguém digitando): quase 6 para cada pedido digitado</p></div>
+<div class="card"><h3 class="big">2.287</h3><p>pedidos digitados por uma pessoa no mês</p></div>
+<div class="card"><h3 class="big">12,6%</h3><p>deles eram repetição (o mesmo pedido 3 vezes ou mais)</p></div>
+<div class="card"><h3 class="big">68×</h3><p>"qual a situação": o campeão. Somando "o que está rodando" e parecidos, 80 checagens</p></div>
+<div class="card"><h3 class="big">13.505</h3><p>turnos feitos por robôs (agentes que rodam sozinhos, sem ninguém digitando): quase 6 para cada pedido digitado</p></div>
 </div>
 <h3 style="margin:34px 0 10px">Para qual modelo de IA foram os pedidos digitados</h3>
 <p class="sub" style="margin:0 0 10px">Opus 5.5 e Fable 5.2 são dois modelos do Claude: o Opus é o mais rápido, o Fable é o maior (pensa mais, gasta mais). O Codex é o agente da OpenAI.</p>
@@ -174,7 +174,7 @@
 <div class="b"><span class="r">Fable 5.2</span><span class="t"><i style="width:2.4%"></i></span><b>2,4%</b></div>
 <div class="b"><span class="r">Codex (gpt-6-astra)</span><span class="t"><i style="width:0.8%"></i></span><b>0,8%</b></div>
 </div>
-<p class="sub" style="margin-top:14px">O "esforço" (quanto o modelo pensa antes de agir) ficou no nível médio em quase todos os pedidos. A assinatura chegou ao limite de uso 6 vezes no Claude e 10 vezes no Codex. 10% das rodadas do Opus 5.5 passaram de 10 minutos.</p>
+<p class="sub" style="margin-top:14px">O "esforço" (quanto o modelo pensa antes de agir) ficou no nível médio em quase todos os pedidos que registram o esforço. A assinatura chegou ao limite de uso 6 vezes no Claude e 10 vezes no Codex. 10% das rodadas do Opus 5.5 passaram de 10 minutos.</p>
 </div></section>
 <section id="decide"><div class="wrap">
 <span class="chip">Atalho, skill ou resposta</span>
@@ -234,7 +234,7 @@
 <h2>O que precisa</h2>
 <p class="sub">Nada além disto.</p>
 <div class="grid g3">
-<div class="card"><h3>Python 3.9+</h3><p>Já vem no Linux e no Mac.</p><pre><span class="k">python3</span> --version</pre></div>
+<div class="card"><h3>Python 3.9+</h3><p>Já vem no Linux. No Mac pode pedir as ferramentas de linha de comando; no Windows use <code>py</code> no lugar de <code>python3</code>.</p><pre><span class="k">python3</span> --version</pre></div>
 <div class="card"><h3>Histórico do Claude Code ou do Codex</h3><p>Fica em <code>~/.claude/projects</code> e <code>~/.codex/sessions</code>. Basta ter usado.</p><pre><span class="k">ls</span> ~/.claude/projects | head</pre></div>
 <div class="card"><h3>Espanso (opcional)</h3><p>Expansor de texto livre para usar os atalhos gerados. Serve qualquer outro.</p><pre><span class="c"># espanso.org</span></pre></div>
 </div>
@@ -277,8 +277,9 @@
 <h3>Transforme em skill o que tem passos</h3>
 <p>Cada rascunho traz 3 exemplos de como você pediu. Escreva os passos, troque o que muda por argumento e mova para as suas skills. Ou instale a skill do kit e peça ao agente para fazer isso com você.</p>
 <pre><span class="k">ls</span> relatorio/skills-rascunho/
+<span class="k">mkdir -p</span> ~/.claude/skills
 <span class="k">cp -r</span> skill/minhas-repeticoes ~/.claude/skills/
-<span class="k">cp</span> repeticoes.py ~/.claude/skills/minhas-repeticoes/   <span class="c"># depois, no agente: "o que eu repito?"</span></pre>
+<span class="k">cp</span> repeticoes.py DICAS.md ~/.claude/skills/minhas-repeticoes/   <span class="c"># depois, no agente: "o que eu repito?"</span></pre>
 </div></div>
 <div class="step"><div class="b">7</div><div>
 <h3>Meça de novo em 30 dias</h3>

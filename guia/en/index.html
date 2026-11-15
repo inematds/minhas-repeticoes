@@ -162,10 +162,10 @@
 <h2>30 days of working with agents, <span class="amb">counted</span></h2>
 <p class="sub">We ran the kit on an INEMA production machine, where AI agents create videos, guides, and publications every day (30 days through 15/11/2026). Counts only: no text leaves the computer. A "turn" is each time the AI works in a round.</p>
 <div class="grid g4">
-<div class="card"><span class="num">1</span><h3 class="big">2.287</h3><p>requests typed by one person in a month</p></div>
-<div class="card"><span class="num">2</span><h3 class="big">12,6%</h3><p>of them were repetitions (the same request 3 or more times)</p></div>
-<div class="card"><span class="num">3</span><h3 class="big">68×</h3><p>"what's the status": the champion. Adding "what's running" and similar, 80 checks</p></div>
-<div class="card"><span class="num">4</span><h3 class="big">13.505</h3><p>turns handled by bots (agents that run on their own, without anyone typing): almost 6 for every typed request</p></div>
+<div class="card"><h3 class="big">2.287</h3><p>requests typed by one person in a month</p></div>
+<div class="card"><h3 class="big">12,6%</h3><p>of them were repetitions (the same request 3 or more times)</p></div>
+<div class="card"><h3 class="big">68×</h3><p>"what's the status": the champion. Adding "what's running" and similar, 80 checks</p></div>
+<div class="card"><h3 class="big">13.505</h3><p>turns handled by bots (agents that run on their own, without anyone typing): almost 6 for every typed request</p></div>
 </div>
 <h3 style="margin:34px 0 10px">Which AI model the typed requests were sent to</h3>
 <p class="sub" style="margin:0 0 10px">Opus 5.5 and Fable 5.2 are two Claude models: Opus is the faster one, and Fable is the larger one (thinks more, uses more). Codex is OpenAI's agent.</p>
@@ -174,7 +174,7 @@
 <div class="b"><span class="r">Fable 5.2</span><span class="t"><i style="width:2.4%"></i></span><b>2,4%</b></div>
 <div class="b"><span class="r">Codex (gpt-6-astra)</span><span class="t"><i style="width:0.8%"></i></span><b>0,8%</b></div>
 </div>
-<p class="sub" style="margin-top:14px">"Effort" (how much the model thinks before acting) was set to medium for almost all requests. The subscription hit its usage limit 6 times on Claude and 10 times on Codex. 10% of Opus 5.5 runs took more than 10 minutes.</p>
+<p class="sub" style="margin-top:14px">The “effort” (how much the model thinks before acting) was set to medium for almost all requests that record effort. The subscription reached its usage limit 6 times in Claude and 10 times in Codex. 10% of Opus 5.5 runs took more than 10 minutes.</p>
 </div></section>
 <section id="decide"><div class="wrap">
 <span class="chip">Shortcut, skill, or response</span>
@@ -234,7 +234,7 @@
 <h2>What you need</h2>
 <p class="sub">Nothing beyond that.</p>
 <div class="grid g3">
-<div class="card"><h3>Python 3.9+</h3><p>Already included with Linux and Mac.</p><pre><span class="k">python3</span> --version</pre></div>
+<div class="card"><h3>Python 3.9+</h3><p>It’s already included in Linux. On Mac, it may ask you to install the command-line tools; on Windows, use <code>py</code> instead of <code>python3</code>.</p><pre><span class="k">python3</span> --version</pre></div>
 <div class="card"><h3>Claude Code or Codex history</h3><p>It's on <code>~/.claude/projects</code> e <code>~/.codex/sessions</code>. You only need to have used it.</p><pre><span class="k">ls</span> ~/.claude/projects | head</pre></div>
 <div class="card"><h3>Espanso (optional)</h3><p>Free text expander for using the generated shortcuts. Any other one works too.</p><pre><span class="c"># espanso.org</span></pre></div>
 </div>
@@ -277,8 +277,9 @@
 <h3>Turn step-by-step tasks into a skill</h3>
 <p>Each draft includes 3 examples of how you made the request. Write down the steps, turn what changes into an argument, and move it into your skills. Or install the kit’s skill and ask the agent to do it with you.</p>
 <pre><span class="k">ls</span> relatorio/skills-rascunho/
+<span class="k">mkdir -p</span> ~/.claude/skills
 <span class="k">cp -r</span> skill/minhas-repeticoes ~/.claude/skills/
-<span class="k">cp</span> repeticoes.py ~/.claude/skills/minhas-repeticoes/   <span class="c"># later, in the agent: "what do I repeat?"</span></pre>
+<span class="k">cp</span> repeticoes.py DICAS.md ~/.claude/skills/minhas-repeticoes/   <span class="c"># later, in the agent: "what do I repeat?"</span></pre>
 </div></div>
 <div class="step"><div class="b">7</div><div>
 <h3>Measure again in 30 days</h3>
