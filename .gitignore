@@ -1,0 +1,4 @@
+/relatorio/
+/relatorio-*/
+__pycache__/
+*.pyc
